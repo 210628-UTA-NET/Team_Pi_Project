@@ -1,8 +1,14 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Donation Tracker";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1>Donation Tracker</h1>
+    <form action="https://www.paypal.com/paypalme/my/profile?locale.x=en_US&country.x=US">
+        <input type="submit" value="Paypal Me" />
+    </form>
+
+    <p>Money Donated
+        <span style="color: red;">$1.25</span>
+    </p>
 </div>
