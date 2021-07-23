@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore team-pi-project/
+      run: dotnet restore
     - name: Build
-      run: dotnet build restore team-pi-project/ --configuration Release --no-restore
+      run: dotnet build restore --configuration Release --no-restore
     - name: Test
-      run: dotnet test restore team-pi-project/ --no-build --verbosity normal
+      run: dotnet test restore --no-build --verbosity normal
