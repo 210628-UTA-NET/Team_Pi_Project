@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace team_pi_project
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
