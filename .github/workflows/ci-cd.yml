@@ -23,6 +23,16 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - name: sonarscan-dotnet
+      uses: highbyte/sonarscan-dotnet@v2.1.1-beta
+      with:
+        sonarProjectKey: 210628-UTA-NET_Team_Pi_Project
+        sonarProjectName: Team_Pi_Project
+        sonarOrganization: 210628-uta-net
+        dotnetDisableTests: true
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Publish
       run: dotnet publish --configuration Release -o ./publish
     - name: deploy
