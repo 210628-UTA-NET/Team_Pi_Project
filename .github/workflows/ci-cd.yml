@@ -17,9 +17,9 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-    - name: Restore Team_Pi_Project/ dependencies
+    - name: Restore ./DevOps_Practice.sln dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build Team_Pi_Project/ restore --configuration Release --no-restore
+      run: dotnet build ./DevOps_Practice.sln restore --configuration Release --no-restore
     - name: Test
-      run: dotnet test Team_Pi_Project/ restore --no-build --verbosity normal
+      run: dotnet test ./DevOps_Practice.sln restore --no-build --verbosity normal
